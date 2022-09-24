@@ -1,0 +1,149 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --desaturated-dark-blue: hsl(214, 17%, 51%);
+  --grayish-blue: hsl(212, 23%, 69%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  height: 100vh;
+  background: var(--light-grayish-blue);
+  font-family: "Monospaced", sans-serif;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 1440px;
+  margin: auto;
+}
+
+.p1 {
+  color: var(--very-dark-grayish-blue);
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.p2 {
+  color: var(--desaturated-dark-blue);
+}
+
+.content {
+  background: white;
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.content__img img {
+  width: 100%;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.content__text {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.profile-folder {
+  margin-top: 1rem;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 1rem;
+}
+
+.profile ul li:nth-child(1) {
+  color: var(--very-dark-grayish-blue);
+  font-weight: 550;
+}
+
+.profile ul li:nth-child(2) {
+  color: var(--desaturated-dark-blue);
+  margin-top: 0.2rem;
+}
+
+.profile img {
+  width: 12%;
+  border-radius: 5rem;
+}
+
+.share {
+  background: var(--light-grayish-blue);
+  padding: 1rem;
+  border-radius: 5rem;
+}
+
+.share-img {
+  width: 100%;
+  display: block;
+}
+
+.social-media {
+  position: absolute;
+  left: 0;
+  margin: auto;
+  bottom: 0;
+  z-index: 1;
+  padding: 1rem;
+  right: 0;
+  background: var(--very-dark-grayish-blue);
+  border-bottom-right-radius: 0.5rem;
+  display: none;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.social-media ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.social-media ul li:nth-child(1) {
+  color: var(--desaturated-dark-blue);
+}
+
+.social-media ul li img {
+  cursor: pointer;
+  width: 1.4rem;
+}
+
+.social-media-folder:hover .social-media {
+  display: flex;
+}
+
+@media screen and (min-width: 1100px) {
+  .content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .p1 {
+    font-size: 30px;
+  }
+
+  .p2 {
+    font-size: 20px;
+  }
+
+  .content__text {
+    width: 40%;
+  }
+}
